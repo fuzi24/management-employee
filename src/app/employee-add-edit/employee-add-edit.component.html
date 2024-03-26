@@ -41,10 +41,13 @@
                 <mat-label>Status</mat-label>
                 <input matInput type="text" formControlName="status">
             </mat-form-field>
-            <mat-form-field appearance="fill">
+            <mat-form-field>
                 <mat-label>Group</mat-label>
-                <mat-select formControlName="group">
-                    <mat-option *ngFor="let item of group" [value]="item"> {{item}}</mat-option>
+                <mat-select formControlName="group" [placeholder]="'Search'" panelClass="custom-mat-select">
+                  <input type="text" placeholder="Search" matInput (keyup)="filterOptions($any($event.target).value)">
+                  <mat-option *ngFor="let option of filteredOptions" [value]="option.value">
+                    {{ option.viewValue }}
+                  </mat-option>
                 </mat-select>
             </mat-form-field>
         </div>

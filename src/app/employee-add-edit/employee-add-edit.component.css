@@ -26,3 +26,7 @@ input[type=number] {
     flex: 1;
   }
 }
+
+.custom-mat-select {
+  width: 250px; /* Adjust width as needed */
+}

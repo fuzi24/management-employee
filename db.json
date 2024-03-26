@@ -122,6 +122,18 @@
       "status": "active",
       "group": "Ina Turner",
       "description": "desss"
+    },
+    {
+      "id": "d1da",
+      "firstName": "qwe",
+      "lastName": "qwe",
+      "userName": "qwe",
+      "email": "qew@qwe",
+      "dateOfBirth": "2024-03-14T17:00:00.000Z",
+      "basicSalary": 123123,
+      "status": "qwe",
+      "group": "Ina Turner",
+      "description": "adasd"
     }
   ]
 }

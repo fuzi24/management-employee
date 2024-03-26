@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { EmployeeService } from '../services/employee.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { SnackbarService } from '../component/snackbar.service';
@@ -12,19 +12,20 @@ import { SnackbarService } from '../component/snackbar.service';
 export class EmployeeAddEditComponent implements OnInit {
   maxDate: Date;
   employeeForm: FormGroup;
-  group: string[] = [
-    'Avram Roth',
-    'Tallulah Page',
-    'Ina Turner',
-    'Xavier Gamble',
-    'Mallory Wright',
-    'Vivien Hunter',
-    'Barclay Nash',
-    'Gay Wilkinson',
-    'Dexter Yang',
-    'Chastity Atkins'
-
+  options: any[] = [
+    { value: 'Avram Roth', viewValue: 'Avram Roth' },
+    { value: 'Tallulah Page', viewValue: 'Tallulah Page' },
+    { value: 'Ina Turner', viewValue: 'Ina Turner' },
+    { value: 'Xavier Gamble', viewValue: 'Xavier Gamble' },
+    { value: 'Mallory Wright', viewValue: 'Mallory Wright' },
+    { value: 'Vivien Hunter', viewValue: 'Vivien Hunter' },
+    { value: 'Barclay Nash', viewValue: 'Barclay Nash' },
+    { value: 'Gay Wilkinson', viewValue: 'Gay Wilkinson' },
+    { value: 'Dexter Yang', viewValue: 'Dexter Yang' },
+    { value: 'Chastity Atkins', viewValue: 'Chastity Atkins' },
+   
   ];
+  filteredOptions: any[];
 
   constructor(private _fb: FormBuilder, private _employeeService: EmployeeService, private _dialogRef: MatDialogRef<EmployeeAddEditComponent>, @Inject(MAT_DIALOG_DATA) public data: any, private _snackBarService: SnackbarService) {
     this.maxDate = new Date();
@@ -40,10 +41,16 @@ export class EmployeeAddEditComponent implements OnInit {
       description: ['', Validators.required],
 
     })
+    this.filteredOptions = this.options.slice();
   }
 
   ngOnInit(): void {
     this.employeeForm.patchValue(this.data);
+  }
+
+  filterOptions(value: string) {
+    const filterValue = value.toLowerCase();
+    this.filteredOptions = this.options.filter(option => option.viewValue.toLowerCase().includes(filterValue));
   }
 
   submitForm() {
