@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EmployeeService } from '../services/employee.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { SnackbarService } from '../component/snackbar.service';
@@ -29,15 +29,15 @@ export class EmployeeAddEditComponent implements OnInit {
   constructor(private _fb: FormBuilder, private _employeeService: EmployeeService, private _dialogRef: MatDialogRef<EmployeeAddEditComponent>, @Inject(MAT_DIALOG_DATA) public data: any, private _snackBarService: SnackbarService) {
     this.maxDate = new Date();
     this.employeeForm = this._fb.group({
-      firstName: '',
-      lastName: '',
-      userName: '',
-      email: '',
-      dateOfBirth: '',
-      basicSalary: '',
-      status: '',
-      group: '',
-      description: ''
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      userName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      dateOfBirth: ['', Validators.required],
+      basicSalary: ['', Validators.required],
+      status: ['', Validators.required],
+      group: ['', Validators.required],
+      description: ['', Validators.required],
 
     })
   }

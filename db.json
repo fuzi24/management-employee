@@ -74,6 +74,54 @@
       "status": "active",
       "group": "Ina Turner",
       "description": "desss"
+    },
+    {
+      "id": "4b71",
+      "firstName": "Edi",
+      "lastName": "Su",
+      "userName": "SuEdi",
+      "email": "su@edi.com",
+      "dateOfBirth": "2024-03-14T17:00:00.000Z",
+      "basicSalary": 12312312,
+      "status": "active",
+      "group": "Ina Turner",
+      "description": "desss"
+    },
+    {
+      "id": "97dq",
+      "firstName": "gain",
+      "lastName": "joe",
+      "userName": "joe gain",
+      "email": "gain@joe.com",
+      "dateOfBirth": "2024-03-06T17:00:00.000Z",
+      "basicSalary": 230000,
+      "status": "bisaa",
+      "group": "Ina Turner",
+      "description": "desss"
+    },
+    {
+      "firstName": "kurdi",
+      "lastName": "Lin",
+      "userName": "Lurd",
+      "email": "kur@di.com",
+      "dateOfBirth": "2024-03-13T17:00:00.000Z",
+      "basicSalary": 123123123,
+      "status": "active",
+      "group": "Xavier Gamble",
+      "description": "dess",
+      "id": "0421"
+    },
+    {
+      "id": "4b71",
+      "firstName": "Edi",
+      "lastName": "Su",
+      "userName": "SuEdi",
+      "email": "su@edi.com",
+      "dateOfBirth": "2024-03-14T17:00:00.000Z",
+      "basicSalary": 12312312,
+      "status": "active",
+      "group": "Ina Turner",
+      "description": "desss"
     }
   ]
 }
