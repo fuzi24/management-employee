@@ -1,0 +1,62 @@
+<div mat-dialog-title>
+    <h1>Employee Add</h1>
+</div>
+<form [formGroup]="employeeForm" (ngSubmit)="submitForm()">
+    <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="fill">
+                <mat-label>First Name</mat-label>
+                <input matInput type="text" formControlName="firstName">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Last Name</mat-label>
+                <input matInput type="text" formControlName="lastName">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="fill">
+                <mat-label>User Name</mat-label>
+                <input matInput type="text" formControlName="userName">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput type="Email" formControlName="email">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="fill">
+                <mat-label>Date of Birth</mat-label>
+                <input matInput [matDatepicker]="picker" [max]="maxDate" formControlName="dateOfBirth">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Basic Salary</mat-label>
+                <input matInput type="number" formControlName="basicSalary">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field appearance="fill">
+                <mat-label>Status</mat-label>
+                <input matInput type="text" formControlName="status">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Group</mat-label>
+                <mat-select formControlName="group">
+                    <mat-option *ngFor="let item of group" [value]="item"> {{item}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field class="example-full-width">
+                <mat-label>Description</mat-label>
+                <textarea matInput placeholder="Ex. It makes me feel..." formControlName="description"></textarea>
+            </mat-form-field>
+        </div>
+    </div>
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button color="secondary" type="button" [mat-dialog-close]="false">Close</button>
+        <button mat-raised-button color="primary" type="submit">{{data ? 'Update' : 'Save'}}</button>
+    </div>
+</form>
