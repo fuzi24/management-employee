@@ -21,4 +21,24 @@ export class EmployeeService {
   deleteEmployee(id: any){
     return this._http.delete(`http://localhost:3000/employee/${id}`)
   }
+
+  getAll(){
+    return this._http.get('http://localhost:3000/user')
+  }
+  getByCode(code:any){
+    return this._http.get('http://localhost:3000/user' + '/' + code)
+  }
+
+  proRegis(inputData:any){
+    return this._http.post('http://localhost:3000/user', inputData)
+  }
+  updetRegis(code: any, inputData:any){
+    return this._http.put('http://localhost:3000/user' + '/' + code, inputData)
+  }
+  isloggedin(){
+    return sessionStorage.getItem('username')!=null;
+  }
+  getrole(){
+    return sessionStorage.getItem('role')!=null?sessionStorage.getItem('role')?.toString():'';
+  }
 }

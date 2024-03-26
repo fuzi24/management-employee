@@ -28,30 +28,6 @@
   },
   "employee": [
     {
-      "id": "4b72",
-      "firstName": "Edi",
-      "lastName": "Su",
-      "userName": "SuEdi",
-      "email": "su@edi.com",
-      "dateOfBirth": "2024-03-14T17:00:00.000Z",
-      "basicSalary": 12312312,
-      "status": "active",
-      "group": "Ina Turner",
-      "description": "desss"
-    },
-    {
-      "id": "97de",
-      "firstName": "gain",
-      "lastName": "joe",
-      "userName": "joe gain",
-      "email": "gain@joe.com",
-      "dateOfBirth": "2024-03-06T17:00:00.000Z",
-      "basicSalary": 230000,
-      "status": "bisaa",
-      "group": "Ina Turner",
-      "description": "desss"
-    },
-    {
       "firstName": "kurdi",
       "lastName": "Lin",
       "userName": "Lurd",
@@ -134,6 +110,24 @@
       "status": "qwe",
       "group": "Ina Turner",
       "description": "adasd"
+    }
+  ],
+  "user": [
+    {
+      "id": "Jajan",
+      "name": "Jajang",
+      "password": "password",
+      "email": "email@email.com",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "ujang",
+      "name": "Ujang Ugug",
+      "password": "password",
+      "email": "email@email.com",
+      "isActive": true,
+      "role": "admin"
     }
   ]
 }

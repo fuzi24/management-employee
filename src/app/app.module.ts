@@ -19,11 +19,19 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { LoginComponent } from './login/login.component';
+import { ToastrModule} from 'ngx-toastr';
+import { RegisterComponent } from './register/register.component';
+import { ListEmployeeComponent } from './list-employee/list-employee.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeAddEditComponent
+    EmployeeAddEditComponent,
+    LoginComponent,
+    RegisterComponent,
+    ListEmployeeComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +49,11 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     HttpClientModule,
     MatTableModule,
     MatPaginator,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ToastrModule.forRoot(),
+    MatCardModule
+
+
   ],
   providers: [
     provideAnimationsAsync()
