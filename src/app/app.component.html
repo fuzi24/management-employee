@@ -312,7 +312,7 @@
 </style>
 
 <!-- Toolbar -->
-<div class="toolbar" role="banner" *ngIf="isMenuVisible">
+<div class="toolbar" role="banner">
   <img
     width="40"
     alt="Angular Logo"
@@ -320,10 +320,10 @@
   />
   <span>Employee Management</span>
   <div class="spacer"></div>
-  <a routerLink="/login">Logout</a>
+  <a *ngIf="isMenuVisible" routerLink="/login">Logout</a>
 </div>
 
-<div class="content" style="width: 100%;display: block;" role="main">
+<div class="content" style="width: 100%" role="main">
   <router-outlet></router-outlet>
 </div>
 

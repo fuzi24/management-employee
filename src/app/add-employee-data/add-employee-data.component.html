@@ -60,8 +60,8 @@
             </div>
         </div>
         <div mat-dialog-actions class="action">
-            <button mat-raised-button color="secondary" type="button" [mat-dialog-close]="false">Close</button>
-            <button mat-raised-button color="primary" type="submit">{{data ? 'Update' : 'Save'}}</button>
+            <button mat-raised-button color="secondary" type="button" (click)="cancel()">{{typeClick === 'view' ? 'Back' : 'Close'}}</button>
+            <button mat-raised-button color="primary" type="submit" *ngIf="isMenuVisible">{{data ? 'Update' : 'Save'}}</button>
         </div>
     </form>
 </div>

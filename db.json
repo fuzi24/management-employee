@@ -29,7 +29,7 @@
   "employee": [
     {
       "firstName": "kurdi",
-      "lastName": "Lin",
+      "lastName": "Lindan",
       "userName": "Lurd",
       "email": "kur@di.com",
       "dateOfBirth": "2024-03-13T17:00:00.000Z",
@@ -40,16 +40,16 @@
       "id": "0425"
     },
     {
-      "id": "4b76",
       "firstName": "Edi",
-      "lastName": "Su",
+      "lastName": "Subbb",
       "userName": "SuEdi",
       "email": "su@edi.com",
       "dateOfBirth": "2024-03-14T17:00:00.000Z",
       "basicSalary": 12312312,
       "status": "active",
       "group": "Ina Turner",
-      "description": "desss"
+      "description": "desss",
+      "id": "4b76"
     },
     {
       "id": "4b71",
@@ -76,18 +76,6 @@
       "description": "desss"
     },
     {
-      "firstName": "kurdi",
-      "lastName": "Lin",
-      "userName": "Lurd",
-      "email": "kur@di.com",
-      "dateOfBirth": "2024-03-13T17:00:00.000Z",
-      "basicSalary": 123123123,
-      "status": "active",
-      "group": "Xavier Gamble",
-      "description": "dess",
-      "id": "0421"
-    },
-    {
       "id": "4b71",
       "firstName": "Edi",
       "lastName": "Su",
@@ -110,6 +98,18 @@
       "status": "qwe",
       "group": "Ina Turner",
       "description": "adasd"
+    },
+    {
+      "firstName": "haji",
+      "lastName": "hajah",
+      "userName": "haji",
+      "email": "haji@hajah.com",
+      "dateOfBirth": "2024-03-21T17:00:00.000Z",
+      "basicSalary": 23,
+      "status": "status",
+      "group": "Xavier Gamble",
+      "description": "desss",
+      "id": "caf8"
     }
   ],
   "user": [

@@ -13,3 +13,11 @@
   display: flex;
   justify-content: space-between;
 }
+
+.white-icon {
+  color: rgb(165, 165, 6)
+}
+
+.white-icon svg {
+  fill: white;
+}

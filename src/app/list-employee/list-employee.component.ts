@@ -6,6 +6,7 @@ import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatSort, MatSortModule} from '@angular/material/sort';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { SnackbarService } from '../component/snackbar.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list-employee',
@@ -17,41 +18,47 @@ export class ListEmployeeComponent {
 
   displayedColumns: string[] = ['firstName', 'lastName', 'userName', 'email', 'dateOfBirth', 'basicSalary', 'action'];
   dataSource!: MatTableDataSource<any>;
+  dataSearch: any
+  filterValue: any
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private _dialog: MatDialog, private _employeeService: EmployeeService, private _snackBarService: SnackbarService) {}
+  constructor(private _dialog: MatDialog, private _employeeService: EmployeeService, private _snackBarService: SnackbarService, private _router: Router) {}
 
   ngOnInit(): void {
     this.getEmployeeList();
   }
 
   openAddEmployeeForm(){
-    const dialogRef = this._dialog.open(EmployeeAddEditComponent, {
-      width: '900px',
-    });
-    dialogRef.afterClosed().subscribe({
-      next: (res) => {
-        if (res) {
-          this.getEmployeeList();
-        }
-      }
-    })
+    // this._router.navigate('/')
+    this._router.navigate(['/add-employee']);
+    // const dialogRef = this._dialog.open(EmployeeAddEditComponent, {
+    //   width: '900px',
+    // });
+    // dialogRef.afterClosed().subscribe({
+    //   next: (res) => {
+    //     if (res) {
+    //       this.getEmployeeList();
+    //     }
+    //   }
+    // })
   }
 
-  openEditEmployeeForm(data: any){
-    const dialogRef = this._dialog.open(EmployeeAddEditComponent, {
-      data: data,
-      width: '900px',
-    });
-    dialogRef.afterClosed().subscribe({
-      next: (res) => {
-        if (res) {
-          this.getEmployeeList();
-        }
-      }
-    })
+  openEditEmployeeForm(data: any, type: any){
+    this._router.navigate(['/edit-employee', data.id], { state: { filter: type } });
+    
+    // const dialogRef = this._dialog.open(EmployeeAddEditComponent, {
+    //   data: data,
+    //   width: '900px',
+    // });
+    // dialogRef.afterClosed().subscribe({
+    //   next: (res) => {
+    //     if (res) {
+    //       this.getEmployeeList();
+    //     }
+    //   }
+    // })
   }
 
   getEmployeeList(){

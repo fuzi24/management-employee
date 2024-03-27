@@ -24,6 +24,7 @@ import { ToastrModule} from 'ngx-toastr';
 import { RegisterComponent } from './register/register.component';
 import { ListEmployeeComponent } from './list-employee/list-employee.component';
 import {MatCardModule} from '@angular/material/card';
+import { AddEmployeeDataComponent } from './add-employee-data/add-employee-data.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MatCardModule} from '@angular/material/card';
     EmployeeAddEditComponent,
     LoginComponent,
     RegisterComponent,
-    ListEmployeeComponent
+    ListEmployeeComponent,
+    AddEmployeeDataComponent
   ],
   imports: [
     BrowserModule,
