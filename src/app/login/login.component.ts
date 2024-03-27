@@ -12,16 +12,16 @@ import { SnackbarService } from '../component/snackbar.service';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  constructor(private builder: FormBuilder, private _toastr: ToastrService, private _service: EmployeeService,
-    private router: Router, private _snackBarService: SnackbarService) {
+  constructor(private _fb: FormBuilder, private _toastr: ToastrService, private _service: EmployeeService,
+    private _router: Router, private _snackBarService: SnackbarService) {
       sessionStorage.clear();
 
   }
   result: any;
 
-  loginform = this.builder.group({
-    id: this.builder.control('', Validators.required),
-    password: this.builder.control('', Validators.required)
+  loginform = this._fb.group({
+    id: this._fb.control('', Validators.required),
+    password: this._fb.control('', Validators.required)
   });
 
   proceedlogin() {
@@ -33,7 +33,7 @@ export class LoginComponent {
             if (this.result.isActive) {
               sessionStorage.setItem('username',this.result.id);
               sessionStorage.setItem('role',this.result.role);
-              this.router.navigate(['']);
+              this._router.navigate(['']);
             } else {
               this._snackBarService.openSnackBar('User tidak aktif', 'ok')
             }
