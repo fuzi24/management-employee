@@ -24,7 +24,7 @@ export class AddEmployeeDataComponent {
     { value: 'Barclay Nash', viewValue: 'Barclay Nash' },
     { value: 'Gay Wilkinson', viewValue: 'Gay Wilkinson' },
     { value: 'Dexter Yang', viewValue: 'Dexter Yang' },
-    { value: 'Chastity Atkins', viewValue: 'Chastity Atkins' },
+    { value: 'Chastity Atkins', viewValue: 'Chastity Atkins'},
    
   ];
   filteredOptions: any[];
