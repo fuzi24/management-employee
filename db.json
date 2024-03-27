@@ -27,6 +27,14 @@
       "email": "email@email.com",
       "isActive": true,
       "role": "admin"
+    },
+    {
+      "id": "Tirai",
+      "name": "Tirai",
+      "password": "pass",
+      "email": "email@email.com",
+      "isActive": true,
+      "role": "admin"
     }
   ],
   "comments": [

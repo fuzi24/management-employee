@@ -4,6 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../auth/auth.service';
 import { Router } from '@angular/router';
 import { EmployeeService } from '../services/employee.service';
+import { SnackbarService } from '../component/snackbar.service';
 
 @Component({
   selector: 'app-login',
@@ -11,8 +12,8 @@ import { EmployeeService } from '../services/employee.service';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  constructor(private builder: FormBuilder, private toastr: ToastrService, private service: EmployeeService,
-    private router: Router) {
+  constructor(private builder: FormBuilder, private _toastr: ToastrService, private _service: EmployeeService,
+    private router: Router, private _snackBarService: SnackbarService) {
       sessionStorage.clear();
 
   }
@@ -25,22 +26,28 @@ export class LoginComponent {
 
   proceedlogin() {
     if (this.loginform.valid) {
-      this.service.getByCode(this.loginform.value.id).subscribe(item => {
-        this.result = item;
-        if (this.result.password === this.loginform.value.password) {
-          if (this.result.isActive) {
-            sessionStorage.setItem('username',this.result.id);
-            sessionStorage.setItem('role',this.result.role);
-            this.router.navigate(['']);
+      this._service.getByCode(this.loginform.value.id).subscribe({
+        next: (res: any) => {
+          this.result = res;
+          if (this.result.password === this.loginform.value.password) {
+            if (this.result.isActive) {
+              sessionStorage.setItem('username',this.result.id);
+              sessionStorage.setItem('role',this.result.role);
+              this.router.navigate(['']);
+            } else {
+              this._snackBarService.openSnackBar('User tidak aktif', 'ok')
+            }
           } else {
-            this.toastr.error('Please contact Admin', 'InActive User');
+            this._snackBarService.openSnackBar('Data yang dimasukan salah', 'ok')
           }
-        } else {
-          this.toastr.error('Invalid credentials');
+        },
+        error: (err: any) => {
+          console.log(err);
+          this._snackBarService.openSnackBar('Data yang anda masukan salah', 'ok')
         }
-      });
+      })
     } else {
-      this.toastr.warning('Please enter valid data.')
+      this._snackBarService.openSnackBar('Masukan data yang valid', 'done')
     }
   }
 }
