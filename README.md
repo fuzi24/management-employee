@@ -1,6 +1,10 @@
 # EmployeeManagement
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+This project was generated with 
+- [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+- [Material-Angular] (https://material.angular.io/) version 17.3.1
+- [ngx-mask] (https://www.npmjs.com/package/ngx-mask/v/15.1.5)
+- [Json-Server] (https://www.npmjs.com/package/json-server)
 
 ## Development server
 
