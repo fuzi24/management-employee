@@ -17,13 +17,11 @@ ika Anda belum memiliki Angular CLI diinstal, Anda dapat menginstalnya secara gl
 
 - Clone Repository:
 Gunakan perintah git clone untuk mengkloning repositori proyek Angular dari repositori yang ada. Misalnya:
-`git clone <url_repositori>` dalam priject ini menggunakan url `git clone https://github.com/fuzi24/management-employee.git`.
-Gantilah <url_repositori> dengan URL repositori yang sesuai.
+`git clone <url_repositori>` dalam proyek ini menggunakan url `git clone https://github.com/fuzi24/management-employee.git`.
 
 - Masuk ke Direktori Proyek:
 Navigasikan terminal atau command prompt Anda ke direktori proyek yang baru saja Anda kloning:
 `cd <nama_direktori>` misal `cd management-employee`
-Gantilah <nama_direktori> dengan nama direktori yang sesuai dengan proyek yang Anda kloning.
 
 - Instalasi Dependensi:
 Setelah Anda berada dalam direktori proyek, Anda perlu menginstal semua dependensi yang diperlukan. Lakukan ini dengan menjalankan perintah:
