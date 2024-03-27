@@ -1,6 +1,5 @@
 import { Component, DoCheck, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { EmployeeAddEditComponent } from './employee-add-edit/employee-add-edit.component';
 import { EmployeeService } from './services/employee.service';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatSort, MatSortModule} from '@angular/material/sort';
