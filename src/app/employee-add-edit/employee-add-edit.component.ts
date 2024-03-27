@@ -56,7 +56,6 @@ export class EmployeeAddEditComponent implements OnInit {
   submitForm() {
     if (this.data) {
       if (this.employeeForm.valid) {
-        console.log(this.employeeForm.value);
         this._employeeService.putEmployee(this.data.id, this.employeeForm.value).subscribe({
           next: (res: any) => {
             this._snackBarService.openSnackBar('Data berhasil update!', 'done')
@@ -70,7 +69,6 @@ export class EmployeeAddEditComponent implements OnInit {
       }
     } else {
       if (this.employeeForm.valid) {
-        console.log(this.employeeForm.value);
         this._employeeService.addEmployee(this.employeeForm.value).subscribe({
           next: (res: any) => {
             this._snackBarService.openSnackBar('Data berhasil save!', 'done')

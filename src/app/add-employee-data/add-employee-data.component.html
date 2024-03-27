@@ -1,6 +1,6 @@
 <div class="main-body">
     <div mat-dialog-title>
-        <h1>Employee Add</h1>
+        <h1>Employee {{ typeClick }}</h1>
     </div>
     <form [formGroup]="employeeForm" (ngSubmit)="submitForm()">
         <div mat-dialog-content class="content">
@@ -34,7 +34,7 @@
                 </mat-form-field>
                 <mat-form-field appearance="fill">
                     <mat-label>Basic Salary</mat-label>
-                    <input matInput type="number" formControlName="basicSalary">
+                    <input matInput type="text" formControlName="basicSalary" mask="separator.2" thousandsSeparator="," decimalSeparator="." prefix="Rp " />
                 </mat-form-field>
             </div>
             <div class="row">

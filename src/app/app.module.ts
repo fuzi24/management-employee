@@ -25,6 +25,7 @@ import { RegisterComponent } from './register/register.component';
 import { ListEmployeeComponent } from './list-employee/list-employee.component';
 import {MatCardModule} from '@angular/material/card';
 import { AddEmployeeDataComponent } from './add-employee-data/add-employee-data.component';
+import { NgxMaskDirective, NgxMaskPipe, provideEnvironmentNgxMask, provideNgxMask } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -53,12 +54,16 @@ import { AddEmployeeDataComponent } from './add-employee-data/add-employee-data.
     MatPaginator,
     MatSnackBarModule,
     ToastrModule.forRoot(),
-    MatCardModule
+    MatCardModule,
+    NgxMaskDirective,
+    NgxMaskPipe
 
 
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    provideEnvironmentNgxMask(),
+    provideNgxMask()
   ],
   bootstrap: [AppComponent]
 })
