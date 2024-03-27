@@ -17,7 +17,7 @@ ika Anda belum memiliki Angular CLI diinstal, Anda dapat menginstalnya secara gl
 
 - Clone Repository:
 Gunakan perintah git clone untuk mengkloning repositori proyek Angular dari repositori yang ada. Misalnya:
-`git clone <url_repositori>` dalam priject ini menggunakan url `git clone https://github.com/fuzi24/management-employee.git`
+`git clone <url_repositori>` dalam priject ini menggunakan url `git clone https://github.com/fuzi24/management-employee.git`.
 Gantilah <url_repositori> dengan URL repositori yang sesuai.
 
 - Masuk ke Direktori Proyek:
@@ -40,11 +40,11 @@ Setelah server dijalankan, tambah terminal dan jalankan perintah berikut, agar J
 pastikan hal hal seperti ini sudah muncul pada terminal
 
 Endpoints:
-http://localhost:3000/posts
-http://localhost:3000/user
-http://localhost:3000/comments
-http://localhost:3000/profile
-http://localhost:3000/employee
+http://localhost:3000/posts.
+http://localhost:3000/user.
+http://localhost:3000/comments.
+http://localhost:3000/profile.
+http://localhost:3000/employee.
 
 jika data seperti di atas sudah muncul berarti json server sudah jalan dan CRUD bisa dilakukan
 
