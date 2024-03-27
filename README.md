@@ -39,12 +39,7 @@ Setelah server dijalankan, tambah terminal dan jalankan perintah berikut, agar J
 
 pastikan hal hal seperti ini sudah muncul pada terminal
 
-Endpoints:
-http://localhost:3000/posts.
-http://localhost:3000/user.
-http://localhost:3000/comments.
-http://localhost:3000/profile.
-http://localhost:3000/employee.
+![alt text](image.png)
 
 jika data seperti di atas sudah muncul berarti json server sudah jalan dan CRUD bisa dilakukan
 
