@@ -1,0 +1,43 @@
+.content{
+    padding-top: 10px;
+    
+}
+.main-body{
+    padding-top: 20px;
+    margin-top: 100px !important;
+    margin: 0 auto;
+    max-width: 1248px;
+    mat-form-field {
+      width: 50%;
+    }
+  }
+.row{
+    display: flex;
+    gap: 10px;
+    mat-form-field {
+        width: 100%;
+    }
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.action{
+  padding: 0px 25px 20px;
+  button {
+    flex: 1;
+  }
+}
+
+.custom-mat-select {
+  width: 250px; /* Adjust width as needed */
+}
+
