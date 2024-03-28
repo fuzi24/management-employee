@@ -6,6 +6,15 @@ This project was generated with
 - [ngx-mask] (https://www.npmjs.com/package/ngx-mask/v/15.1.5)
 - [Json-Server] (https://www.npmjs.com/package/json-server)
 
+User Login
+User : Tirai
+Pass : pass
+
+User : Jajan
+Pass : password
+
+kalo ingin menggunakan user login baru, tinggal klik saja `New User` pada page login, nanti akan di direct ke Page Registrasi
+
 ## Instal Project
 
 - Persiapkan Lingkungan Pengembangan: 
