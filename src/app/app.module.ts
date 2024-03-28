@@ -25,6 +25,7 @@ import { ListEmployeeComponent } from './list-employee/list-employee.component';
 import {MatCardModule} from '@angular/material/card';
 import { AddEmployeeDataComponent } from './add-employee-data/add-employee-data.component';
 import { NgxMaskDirective, NgxMaskPipe, provideEnvironmentNgxMask, provideNgxMask } from 'ngx-mask';
+import { DeleteAlertComponent } from './delete-alert/delete-alert.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { NgxMaskDirective, NgxMaskPipe, provideEnvironmentNgxMask, provideNgxMas
     LoginComponent,
     RegisterComponent,
     ListEmployeeComponent,
-    AddEmployeeDataComponent
+    AddEmployeeDataComponent,
+    DeleteAlertComponent
   ],
   imports: [
     BrowserModule,

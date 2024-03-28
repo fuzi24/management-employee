@@ -1,10 +1,4 @@
-<!-- <mat-toolbar>
-    <span>Employee Management</span>
-    <span class="example-spacer"></span>
-    <button mat-raised-button color="primary" (click)="openAddEmployeeForm()">
-      Add Employee
-    </button>
-</mat-toolbar> -->
+
 <div class="main-body">
     <div class="body-header">
       <mat-form-field>
@@ -65,7 +59,7 @@
             <button class="white-icon" mat-icon-button (click)="openEditEmployeeForm(row,'edit') ">
               <mat-icon>edit</mat-icon>
             </button>
-            <button mat-icon-button color="warn" (click)="deleteEmployee(row.id)">
+            <button mat-icon-button color="warn" (click)="openDeleteDialog(row.id)">
               <mat-icon>delete</mat-icon>
             </button>
           </td>

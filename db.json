@@ -54,30 +54,6 @@
   },
   "employee": [
     {
-      "firstName": "kurdi",
-      "lastName": "Lindan",
-      "userName": "Lurd",
-      "email": "kur@di.com",
-      "dateOfBirth": "2024-03-13T17:00:00.000Z",
-      "basicSalary": 123123123,
-      "status": "active",
-      "group": "Xavier Gamble",
-      "description": "dess",
-      "id": "7b36"
-    },
-    {
-      "firstName": "Edi",
-      "lastName": "Subbb",
-      "userName": "SuEdi",
-      "email": "su@edi.com",
-      "dateOfBirth": "2024-03-14T17:00:00.000Z",
-      "basicSalary": 12312312,
-      "status": "active",
-      "group": "Ina Turner",
-      "description": "desss",
-      "id": "50d9"
-    },
-    {
       "firstName": "Edi",
       "lastName": "Su",
       "userName": "SuEdi",
@@ -1252,6 +1228,30 @@
       "group": "Xavier Gamble",
       "description": "dess",
       "id": "65d0"
+    },
+    {
+      "id": "0100",
+      "firstName": "Eminem",
+      "lastName": "Rap",
+      "userName": "Rap god",
+      "email": "eminame@eminame.com",
+      "dateOfBirth": "2024-03-21T17:00:00.000Z",
+      "basicSalary": 22312323,
+      "status": "Active",
+      "group": "Tallulah Page",
+      "description": "sadasdasd"
+    },
+    {
+      "id": "8c44",
+      "firstName": "Mamat",
+      "lastName": "Alkatiri",
+      "userName": "Mamat",
+      "email": "mamat@alkatiri.com",
+      "dateOfBirth": "2024-03-21T17:00:00.000Z",
+      "basicSalary": 23424234,
+      "status": "active",
+      "group": "Tallulah Page",
+      "description": "Des"
     }
   ]
 }

@@ -6,6 +6,7 @@ import {MatSort, MatSortModule} from '@angular/material/sort';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { SnackbarService } from '../component/snackbar.service';
 import { Router } from '@angular/router';
+import { DeleteAlertComponent } from '../delete-alert/delete-alert.component';
 
 @Component({
   selector: 'app-list-employee',
@@ -30,34 +31,11 @@ export class ListEmployeeComponent {
   }
 
   openAddEmployeeForm(){
-    // this._router.navigate('/')
     this._router.navigate(['/add-employee']);
-    // const dialogRef = this._dialog.open(EmployeeAddEditComponent, {
-    //   width: '900px',
-    // });
-    // dialogRef.afterClosed().subscribe({
-    //   next: (res) => {
-    //     if (res) {
-    //       this.getEmployeeList();
-    //     }
-    //   }
-    // })
   }
 
   openEditEmployeeForm(data: any, type: any){
     this._router.navigate(['/edit-employee', data.id], { state: { filter: type } });
-    
-    // const dialogRef = this._dialog.open(EmployeeAddEditComponent, {
-    //   data: data,
-    //   width: '900px',
-    // });
-    // dialogRef.afterClosed().subscribe({
-    //   next: (res) => {
-    //     if (res) {
-    //       this.getEmployeeList();
-    //     }
-    //   }
-    // })
   }
 
   getEmployeeList(){
@@ -84,16 +62,23 @@ export class ListEmployeeComponent {
     }
   }
 
-  deleteEmployee(id: any){
-    this._employeeService.deleteEmployee(id).subscribe({
-      next: (res) => {
-        this._snackBarService.openSnackBar('Data berhasil dihapus!', 'done')
+  openDeleteDialog(id: any): void {
+    const dialogRef = this._dialog.open(DeleteAlertComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this._employeeService.deleteEmployee(id).subscribe({
+          next: (res) => {
+            this._snackBarService.openSnackBar('Data berhasil dihapus!', 'done')
+            this.getEmployeeList();
+          },
+          error: (err) => {
+            console.log(err);
+          }
+        })
+      } else {
         this.getEmployeeList();
-      },
-      error: (err) => {
-        console.log(err);
-        
+        console.log('Deletion cancelled.');
       }
-    })
+    });
   }
 }
