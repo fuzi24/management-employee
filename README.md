@@ -8,13 +8,13 @@ This project was generated with
 
 User Login
 
-User : Tirai
+User : Tirai,
 Pass : pass
 
-User : Jajan
+User : Jajan,
 Pass : password
 
-kalo ingin menggunakan user login baru, tinggal klik saja `New User` pada page login, nanti akan di direct ke Page Registrasi
+jika ingin menggunakan user login baru, tinggal klik saja `New User` pada page login, nanti akan di direct ke Page Registrasi
 
 ## Instal Project
 
